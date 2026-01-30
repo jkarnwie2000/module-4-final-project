@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif; 
+    color: #243e63;       
+}
+
+/**GENERAL SECTION FOR ENTIRE PAGE**/
+#landing {
+   min-height: 40vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column; 
+}
+
+html, body {
+    height: 100%;    
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    padding: 50px 0;
+    width: 100%;
+}
+
+/**TOP SECTION: NAV BAR SECTION OF PAGE: HOME, ABOUT, & CONTACT LINKS**/
+
+nav {
+    width: 100%;
+    height: 75px;
+    padding-top: 32px;
+    padding-left: 32px;
+   padding-right: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.business__logo--img {
+    width: 75px;
+    height: 75px;
+    
+}
+
+.business__name {
+    color: green;
+    font-size: 50px;  
+}
+
+.business__contacts {
+    display: flex;
+    align-items: center;
+    padding-bottom: 2px;
+}
+
+.contact__link {
+    font-size: 18px;
+    font-weight: 700;
+    padding-top: 4px;
+    margin: 0 24px;
+    text-decoration: none;
+}
+
+/**MIDDLE SECTION: SEARCH BAR SECONTION OF PAGE**/
+
+.input__container {
+  margin-top: 20px;
+  border-radius: 30px;  
+  display: flex;
+  justify-content: center; 
+  align-items: center;  
+  width: 100%;             
+}
+
+
+.fruits__row {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+}
+
+input {
+  border-radius: 8px; /* Rounds the corners of the input field */
+  font-size: 16px;    /* Sets the font size for the input text (and the placeholder text inherits this) */
+  padding: 10px 12px; /* Adjusts the overall size and spacing inside the input */
+  border: 1px solid #ccc; /* Ensures a visible border for the radius to work on */
+}
+
+
+/**BOTTOM SECTION: FOOTER SECTION OF PAGE**/
+
+.footer__links {
+    width: 100%;
+    padding-top: 100px;       
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.footer__link {
+    margin: 0 12px;
+    padding-bottom: 18px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+
+}
+
+.footer__row {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    padding-bottom: 32px;
+    padding-top: 18px;
+}
+
+.green {
+    color: green;
+}
+
+.orange {
+    color: orange;
+}
+
+.footer__link .link__orange--effect-orange {
+ color: orange;
+}
