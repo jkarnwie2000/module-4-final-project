@@ -7,44 +7,34 @@
     color: #243e63;       
 }
 
-/**GENERAL SECTION FOR ENTIRE PAGE**/
-#landing {
-   min-height: 40vh;
+#heading {
     width: 100%;
-    display: flex;
-    flex-direction: column; 
+    max-width: 1200px;
+    height: 10%;
 }
 
-html, body {
-    height: 100%;    
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-.container {
-    padding: 50px 0;
-    width: 100%;
-}
+/**GENERAL CODING FOR ENTIRE WEBSITE**/
 
 /**TOP SECTION: NAV BAR SECTION OF PAGE: HOME, ABOUT, & CONTACT LINKS**/
 
-nav {
+nav {    
     width: 100%;
     height: 75px;
-    padding-top: 32px;
-    padding-left: 32px;
-   padding-right: 32px;
+    padding: 60px 0;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    
+    align-items: center;    
+}
+
+.contact__link:hover {
+    text-decoration: underline;
+    cursor: not-allowed;
 }
 
 .business__logo--img {
     width: 75px;
     height: 75px;
+    background: none;
     
 }
 
@@ -67,34 +57,119 @@ nav {
     text-decoration: none;
 }
 
-/**MIDDLE SECTION: SEARCH BAR SECONTION OF PAGE**/
-
-.input__container {
-  margin-top: 20px;
-  border-radius: 30px;  
-  display: flex;
-  justify-content: center; 
-  align-items: center;  
-  width: 100%;             
+/**GENERAL SECTION FOR ENTIRE PAGE**/
+section {
+    width: 100%;
+    height: 10%;
+    display: block;  
 }
 
 
-.fruits__row {
-    align-items: center;
-    display: flex;
+html, body {
+    height: 100%;    
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/**MIDDLE SECTION**MIDDLE SECTION**MIDDLE SECTION**/
+
+.fruit__row {
     flex-direction: column;
-    justify-content: center;    
+    display: flex;
+    align-items: center;
+    margin-top: 32px;
+    padding-top: 18px;    
 }
 
-input {
-  border-radius: 8px; /* Rounds the corners of the input field */
-  font-size: 16px;    /* Sets the font size for the input text (and the placeholder text inherits this) */
-  padding: 10px 12px; /* Adjusts the overall size and spacing inside the input */
-  border: 1px solid #ccc; /* Ensures a visible border for the radius to work on */
+.fruit__items {
+    width: 100%;
+    padding-top: 100px;       
+    display: flex;
+    justify-content: center;
+    align-items: center;        
+}
+
+.fruit__para {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 36px;
+}
+
+.fruit {
+    width: 25%;
+    padding: 24px;
+}
+
+/**👇THE C0DE THAT MAGICALLY LINE ITEMS UP ABOVE EACH OTHER👇**/
+.fruit__labels {
+    display: flex;
+    flex-wrap: wrap;
+}
+/**☝️THE CODE THAT MAGICALLY LINE ITEMS UP ABOVE EACH OTHER☝️**/
+
+.fruit__name {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: orange;
+}
+
+.fruit__img--wrapper {
+    border-radius: 30px;
+    overflow: hidden;
+    border: none;
+    background-color: transparent;
+    background: none;
+}
+
+.fruit__name:hover {
+    text-decoration: underline;
+    cursor: not-allowed;
+}
+
+.fruit__img {
+    width: 75px;
+    height: 75px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 300ms ease;
+    display: flex;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.fruit__price {
+    padding-right: 6px;
+    color: green;
+}
+
+img {
+    width: 100%;
+}
+
+.fruit__img:hover .fruit__img--wrapper {
+    transform:scale(1.03);
 }
 
 
 /**BOTTOM SECTION: FOOTER SECTION OF PAGE**/
+
+footer {
+    padding-top: 1200px;
+    width: 100%;
+    height: 10%;
+}
+
+.footer__row {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    padding-bottom: 32px;
+    padding-top: 18px;
+}
 
 .footer__links {
     width: 100%;
@@ -110,15 +185,7 @@ input {
     text-decoration: none;
     font-weight: 700;
     font-size: 18px;
-
-}
-
-.footer__row {
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-    padding-bottom: 32px;
-    padding-top: 18px;
+    cursor: not-allowed;
 }
 
 .green {
@@ -130,5 +197,5 @@ input {
 }
 
 .footer__link .link__orange--effect-orange {
- color: orange;
+ color: orange; 
 }

@@ -5,43 +5,205 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Julius Gold and Diamonds</title>
 <link rel="stylesheet" href="styles.css">
+<script src="app.js"></script>
 <script src="https://kit.fontawesome.com/f23afc0fcf.js" crossorigin="anonymous"></script> 
 </head>
 
 <body>
-    <section id="landing">
+    <section id="header">
         <nav>
             <div class="business__logo">
                 <img src="./assets/logo1.png" class="business__logo--img" alt="">
             </div>
-            <h1 class="business__name">Julius Gold Orchards</h1>
+            <h1 class="business__name">Julius <b class="orange">Gold</b> Orchards</h1>
             <div class="business__contacts">                
                 <a href="#" class="contact__link
-                nav__link--anchor
-                link__hover-effect
-                link__hover-effect--black  
-                ">Home</a>
+                "><b class="green">Home</b></a>
+
+                <a href="#" class="contact__link                
+                "><b class="orange">About</b></a>
 
                 <a href="#" class="contact__link
-                nav__link--anchor
-                link__hover-effect
-                link__hover-effect--black  
-                ">About</a>
-
-                <a href="#" class="contact__link
-                nav__link--anchor
-                link__hover-effect
-                link__hover-effect--black  
-                ">Contact</a>                           
-            </div>
+                "><b class="green">Contact</b></a>                           
+            </div>            
         </nav>
     </section>
-    <section  id="landing">
+    <section>
         <div class="fruits__row">
-        <h2 class="products__title">Choose Your Favorite Fruit Below</h2>        
+        <div class="fruit__items">       
+        <h2 class="products__title"><b class="orange">Your</b> <b class="green">Favorite</b> <b class="orange">Fruits</b></h2>                                   
         </div>
-        <div class="input__container">
-        <input type="text" id="myInput" onkeyup="filterFunction()" placeholder="Search for items...">
+        <p class="fruit__para"><b class="green">Are</b> <b class="orange">Here</b></p>
+        </div>
+        <div class="fruit__labels">
+        <div class="fruit">
+            <figure class="fruit__img">
+                <img src="./assets/blueberries.png" class="fruit__img--wrapper" alt="">
+            </figure>
+            <div class="fruit__name">Blueberries</div>
+            <div class="fruit__price">$4.50 per pound</div>
+        </div>
+        <div class="fruit">
+            <figure class="fruit__img">
+                <img src="./assets/strawberries.png" class="fruit__img--wrapper" alt="">
+            </figure>
+            <div class="fruit__name">Strawberries</div>
+            <div class="fruit__price">$6.50 per pound</div>
+        </div>
+        <div class="fruit">
+            <figure class="fruit__img">
+                <img src="./assets/logo1.png" class="fruit__img--wrapper" alt="">
+            </figure>
+            <div class="fruit__name">Orange</div>
+            <div class="fruit__price">$7.00 per pound</div>
+        </div>
+        <div class="fruit">
+            <figure class="fruit__img">
+                <img src="./assets/grapefruit.png" class="fruit__img--wrapper" alt="">
+            </figure>
+            <div class="fruit__name">Grapefruit</div>
+            <div class="fruit__price">$5.50.00 per pound</div>
+        </div>
+        <div class="fruit">
+            <figure class="fruit__img">
+                <img src="./assets/lemon.png" class="fruit__img--wrapper" alt="">
+            </figure>
+            <div class="fruit__name">Lemon</div>
+            <div class="fruit__price">$4.00 per pound</div>
+        </div>
+        <div class="fruit">
+            <figure class="fruit__img">
+                <img src="./assets/lime.png" class="fruit__img--wrapper" alt="">
+            </figure>
+            <div class="fruit__name">Lime</div>
+            <div class="fruit__price">$3.00 per pound</div>
+        </div>
+        <div class="fruit">
+            <figure class="fruit__img">
+                <img src="./assets/pineapple.png" class="fruit__img--wrapper" alt="">
+            </figure>
+            <div class="fruit__name">Pineapple</div>
+            <div class="fruit__price">$8.00 per pound</div>
+        </div>
+        <div class="fruit">
+            <figure class="fruit__img">
+                <img src="./assets/soursop.png" class="fruit__img--wrapper" alt="">
+            </figure>
+            <div class="fruit__name">Soursop</div>
+            <div class="fruit__price">$3.00 per pound</div>
+        </div>
+        <div class="fruit">
+            <figure class="fruit__img">
+                <img src="./assets/grapes.png" class="fruit__img--wrapper" alt="">
+            </figure>
+            <div class="fruit__name">Grapes</div>
+            <div class="fruit__price">$9.00 per pound</div>
+        </div>
+        <div class="fruit">
+            <figure class="fruit__img">
+                <img src="./assets/apple.png" class="fruit__img--wrapper" alt="">
+            </figure>
+            <div class="fruit__name">Apple</div>
+            <div class="fruit__price">$5.00 per pound</div>
+        </div>
+        <div class="fruit">
+            <figure class="fruit__img">
+                <img src="./assets/pawpaw.png" class="fruit__img--wrapper">
+            </figure>
+            <div class="fruit__name">Pawpaw</div>
+            <div class="fruit__price">$9.00 per pound</div>
+        </div>
+        <div class="fruit">
+            <figure class="fruit__img">
+                <img src="./assets/bananas.png" class="fruit__img--wrapper" alt="">
+            </figure>
+            <div class="fruit__name">Bananas</div>
+            <div class="fruit__price">$6.00 per pound</div>
+        </div>
+        <div class="fruit">
+            <figure class="fruit__img">
+                <img src="./assets/blueberries.png" class="fruit__img--wrapper" alt="">
+            </figure>
+            <div class="fruit__name">Blueberries</div>
+            <div class="fruit__price">$7.00 per pound</div>
+        </div>
+        <div class="fruit">
+            <figure class="fruit__img">
+                <img src="./assets/strawberries.png" class="fruit__img--wrapper" alt="">
+            </figure>
+            <div class="fruit__name">Strawberries</div>
+            <div class="fruit__price">$7.00 per pound</div>
+        </div>
+        <div class="fruit">
+            <figure class="fruit__img">
+                <img src="./assets/logo1.png" class="fruit__img--wrapper" alt="">
+            </figure>
+            <div class="fruit__name">Orange</div>
+            <div class="fruit__price">$7.00 per pound</div>
+        </div>
+        <div class="fruit">
+            <figure class="fruit__img">
+                <img src="./assets/grapefruit.png" class="fruit__img--wrapper" alt="">
+            </figure>
+            <div class="fruit__name">Grapefruit</div>
+            <div class="fruit__price">$5.50.00 per pound</div>
+        </div>
+        <div class="fruit">
+            <figure class="fruit__img">
+                <img src="./assets/lemon.png" class="fruit__img--wrapper" alt="">
+            </figure>
+            <div class="fruit__name">Lemon</div>
+            <div class="fruit__price">$4.00 per pound</div>
+        </div>
+        <div class="fruit">
+            <figure class="fruit__img">
+                <img src="./assets/lime.png" class="fruit__img--wrapper" alt="">
+            </figure>
+            <div class="fruit__name">Lime</div>
+            <div class="fruit__price">$3.00 per pound</div>
+        </div>
+        <div class="fruit">
+            <figure class="fruit__img">
+                <img src="./assets/pineapple.png" class="fruit__img--wrapper" alt="">
+            </figure>
+            <div class="fruit__name">Pineapple</div>
+            <div class="fruit__price">$8.00 per pound</div>
+        </div>
+        <div class="fruit">
+            <figure class="fruit__img">
+                <img src="./assets/soursop.png" class="fruit__img--wrapper" alt="">
+            </figure>
+            <div class="fruit__name">Soursop</div>
+            <div class="fruit__price">$3.00 per pound</div>
+        </div>
+        <div class="fruit">
+            <figure class="fruit__img">
+                <img src="./assets/grapes.png" class="fruit__img--wrapper" alt="">
+            </figure>
+            <div class="fruit__name">Grapes</div>
+            <div class="fruit__price">$9.00 per pound</div>
+        </div>
+        <div class="fruit">
+            <figure class="fruit__img">
+                <img src="./assets/apple.png" class="fruit__img--wrapper" alt="">
+            </figure>
+            <div class="fruit__name">Apple</div>
+            <div class="fruit__price">$5.00 per pound</div>
+        </div>
+        <div class="fruit">
+            <figure class="fruit__img">
+                <img src="./assets/pawpaw.png" class="fruit__img--wrapper">
+            </figure>
+            <div class="fruit__name">Pawpaw</div>
+            <div class="fruit__price">$9.00 per pound</div>
+        </div>
+        <div class="fruit">
+            <figure class="fruit__img">
+                <img src="./assets/bananas.png" class="fruit__img--wrapper" alt="">
+            </figure>
+            <div class="fruit__name">Bananas</div>
+            <div class="fruit__price">$6.00 per pound</div>
+        </div>
         </div>
     </section >
     <footer>
@@ -51,19 +213,19 @@
             <a href="#" class="footer__link            
             "><b class="orange">Oranges</b></a>
 
-            <a href="#" class="footer__link             
+            <a href="" class="footer__link             
             "><b class="green">Grapefruits</b></a>
 
-            <a href="#" class="footer__link
+            <a href="" class="footer__link
             link__lemon--effect-lemon 
             "><b class="orange">Lemons</b></a>
 
-            <a href="#" class="footer__link
+            <a href="" class="footer__link
             link__lemon--effect-lemon 
             "><b class="green">Limes</b></a>                                                  
             </div>
-            <p class="footer__copyright"><b class="green">Copyright © 2026</b> <b class="orange">Julius Gold Orchards</b></p>
-            </div>            
+            <p class="footer__copyright"><b class="green"><b class="orange"><b class="green">Copyright</b> <b class="orange">©</b> <b class="green">2026</b> <b class="orange">Julius</b> <b class="green">Gold</b> <b class="orange">Orchards</b></p>
+            </div>            </b>
         </div>                         
     </footer>
 </body>
