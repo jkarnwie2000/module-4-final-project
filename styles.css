@@ -7,35 +7,32 @@
     color: #243e63;       
 }
 
-#heading {
-    width: 100%;
-    max-width: 1200px;
-    height: 10%;
-}
-
 /**GENERAL CODING FOR ENTIRE WEBSITE**/
 
 /**TOP SECTION: NAV BAR SECTION OF PAGE: HOME, ABOUT, & CONTACT LINKS**/
 
-nav {    
-    width: 100%;
-    height: 75px;
-    padding: 60px 0;
+
+
+nav {      
+    height: 75px;    
     display: flex;
     justify-content: space-between;
     align-items: center;    
 }
 
+#header {
+    height: 10%;
+}
+
 .contact__link:hover {
+    font-size: 16px;
     text-decoration: underline;
     cursor: not-allowed;
 }
 
 .business__logo--img {
     width: 75px;
-    height: 75px;
-    background: none;
-    
+    height: 75px;    
 }
 
 .business__name {
@@ -58,12 +55,6 @@ nav {
 }
 
 /**GENERAL SECTION FOR ENTIRE PAGE**/
-section {
-    width: 100%;
-    height: 10%;
-    display: block;  
-}
-
 
 html, body {
     height: 100%;    
@@ -75,18 +66,15 @@ html {
 
 
 /**MIDDLE SECTION**MIDDLE SECTION**MIDDLE SECTION**/
-
-.fruit__row {
-    flex-direction: column;
-    display: flex;
+.container {
+    width: 100%;    
     align-items: center;
-    margin-top: 32px;
-    padding-top: 18px;    
+    justify-content: center;
+    padding-right: 0;        
 }
 
-.fruit__items {
-    width: 100%;
-    padding-top: 100px;       
+.fruit__items {    
+    padding-top: 50px;       
     display: flex;
     justify-content: center;
     align-items: center;        
@@ -98,17 +86,17 @@ html {
     padding-bottom: 36px;
 }
 
-.fruit {
+.fruit {    
     width: 25%;
     padding: 24px;
 }
 
-/**👇THE C0DE THAT MAGICALLY LINE ITEMS UP ABOVE EACH OTHER👇**/
-.fruit__labels {
+/**👇TO MAGICALLY LINE ITEMS UP ABOVE EACH OTHER👇**/
+.fruit__labels {    
     display: flex;
     flex-wrap: wrap;
 }
-/**☝️THE CODE THAT MAGICALLY LINE ITEMS UP ABOVE EACH OTHER☝️**/
+/**☝️TO MAGICALLY LINE ITEMS UP ABOVE EACH OTHER☝️**/
 
 .fruit__name {
     font-size: 20px;
@@ -117,19 +105,16 @@ html {
 }
 
 .fruit__img--wrapper {
-    border-radius: 30px;
+    display: flex;
+    border-radius: 10px;
     overflow: hidden;
-    border: none;
-    background-color: transparent;
-    background: none;
 }
 
 .fruit__name:hover {
     text-decoration: underline;
-    cursor: not-allowed;
 }
 
-.fruit__img {
+.fruit__img {    
     width: 75px;
     height: 75px;
     margin-bottom: 12px;
@@ -138,7 +123,6 @@ html {
     transition: all 300ms ease;
     display: flex;
     cursor: pointer;
-    background-color: transparent;
 }
 
 .fruit__price {
@@ -146,9 +130,6 @@ html {
     color: green;
 }
 
-img {
-    width: 100%;
-}
 
 .fruit__img:hover .fruit__img--wrapper {
     transform:scale(1.03);
@@ -157,18 +138,12 @@ img {
 
 /**BOTTOM SECTION: FOOTER SECTION OF PAGE**/
 
-footer {
-    padding-top: 1200px;
-    width: 100%;
-    height: 10%;
-}
 
 .footer__row {
     flex-direction: column;
     display: flex;
     align-items: center;
-    padding-bottom: 32px;
-    padding-top: 18px;
+    padding-bottom: 32px;    
 }
 
 .footer__links {
@@ -185,7 +160,7 @@ footer {
     text-decoration: none;
     font-weight: 700;
     font-size: 18px;
-    cursor: not-allowed;
+
 }
 
 .green {
@@ -197,5 +172,5 @@ footer {
 }
 
 .footer__link .link__orange--effect-orange {
- color: orange; 
+ color: orange;
 }
