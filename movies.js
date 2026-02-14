@@ -1,8 +1,14 @@
 
 // EXTERNAL OMDB API DATA
-function renderMovies(filter) {
+
+let movies; 
+
+async function renderMovies(filter) {
 const moviesWrapper = document.querySelector('.movies')
-const movies = getMovies();   
+if (!movies) {
+movies = await getMovies();
+}
+moviesWrapper.classList.remove('books__loading')
 
   if (filter === 'LOW_TO_HIGH') {
    movies.sort((a, b) => a.originalPrice - b.originalPrice)   
@@ -13,7 +19,6 @@ const movies = getMovies();
   else if (filter === 'RATING') {
   movies.sort((a, b) => b.rating - a.rating) 
   }
-  
 
 const moviesHtml = movies.map((movie) => {
 
@@ -25,17 +30,37 @@ const moviesHtml = movies.map((movie) => {
         ${movie.Title}
     </div>
     <div class="movie__ratings">
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>                                
-        <i class="fa-solid fa-star-half"></i>
+        ${ratingsHTML(movie.rating)}
     </div>
     <div class="movie__price">
-        <span>$${movie.originalPrice.toFixed(2)}</span>
-    </div>
+      <span>${movie.originalPrice.toFixed(2)}</span>
+    <div>
 </div>`
 }).join('')
 
+function priceHTML(originalPrice, salePrice) {
+  console.log(originalPrice, salePrice) 
+  if (!salePrice) {
+    return `$$(originalPrice.toFixed(2))`
+  }
+  else {
+    return `<span class="movie__price--normal">$${originalPrice.toFixed(2)}</span>$${salePrice.toFixed(2)}`
+  }  
+}
+
+priceHTML()
+
 moviesWrapper.innerHTML = moviesHtml
+}
+function ratingsHTML(rating) {
+let ratingHTML = '';
+for (let i = 0; i < Math.floor(rating); ++i) {
+  ratingHTML += `<i class="fas fa-star"></i>\n`
+}
+if (!Number.isInteger(rating)) {
+ratingHTML += `<i class="fa-solid fa-star-half"></i>`
+}
+return ratingHTML;
 }
 
 function filterMovies(event) {
@@ -47,9 +72,10 @@ setTimeout(() => {
 })
   
 function getMovies() { 
-
-    return [
-    {
+  return new Promise ((resolve) => {
+    setTimeout(() => {
+      resolve ([
+      {
       id: 1,
       Title: "The Fast and the Furious",
       url: "assets/The Fast and the Furious.png",
@@ -64,7 +90,7 @@ function getMovies() {
       url: "assets/Fast & Furious 6.png",
       Year: "2013",
       originalPrice: 11.55,
-      salePrice: 8.55,
+      salePrice: null,
       rating: 5,      
     },
     {
@@ -86,17 +112,17 @@ function getMovies() {
       rating: 2,      
     },    
     {
-      id: 6,
+      id: 5,
       Title: "2 Fast 2 Furious",
       url: "assets/2 Fast 2 Furious.png",
       Year: "2003",
       originalPrice: 17.11,
-      salePrice: 14.20,
+      salePrice: null,
       rating: 3.5,
       
     },    
     {
-      id: 9,
+      id: 6,
       Title: "Fast X",
       url: "assets/Fast X.png",
       Year: "2023",
@@ -109,9 +135,9 @@ function getMovies() {
       Title: "The Fast and the Furious",
       url: "assets/The Fast and the Furious.png",
       Year: "2001",
-      originalPrice: 25.35,
-      salePrice: 16.66,
-      rating: 2.5, 
+      originalPrice: 42.35,
+      salePrice: 25.66,
+      rating: 5, 
       
     },
     {
@@ -119,46 +145,49 @@ function getMovies() {
       Title: "Fast & Furious 6",
       url: "assets/Fast & Furious 6.png",
       Year: "2013",
-      originalPrice: 11.55,
-      salePrice: 8.55,
-      rating: 5,      
+      originalPrice: 60.55,
+      salePrice: null,
+      rating: 3.5,      
     },
     {
       id: 3,
       Title: "Fast Five",
       url: "assets/Fast Five.png",
       Year: "2011",
-      originalPrice: 13.13,
-      salePrice: 10.15,
-      rating: 5,      
+      originalPrice: 41.13,
+      salePrice: 37.15,
+      rating: 1.5,      
     },
     {
       id: 4,
       Title: "Fast & Furious",
       url: "assets/Fast & Furious.png",      
       Year: "2009",
-      originalPrice: 20.11,
-      salePrice: 18.23,
-      rating: 2,      
+      originalPrice: 70.11,
+      salePrice: 65.23,
+      rating: 4.5,      
     },    
     {
       id: 6,
       Title: "2 Fast 2 Furious",
       url: "assets/2 Fast 2 Furious.png",
       Year: "2003",
-      originalPrice: 17.11,
-      salePrice: 14.20,
-      rating: 3.5,      
+      originalPrice: 80.11,
+      salePrice: null,
+      rating: 1.5,      
     },    
     {
       id: 9,
       Title: "Fast X",
       url: "assets/Fast X.png",
       Year: "2023",
-      originalPrice: 32.22,
-      salePrice: 26.15,
-      rating: 3,      
+      originalPrice: 98.22,
+      salePrice: 81.15,
+      rating: 1,      
     },    
-  ];
-}
+  ])
+    }, 1000)
+  })
+
+  }
 
