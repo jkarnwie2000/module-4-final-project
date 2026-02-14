@@ -24,32 +24,24 @@ moviesWrapper.classList.remove('movies__loading')
 const moviesHtml = movies.map((movie) => {
 
   return `<div class="movie">
-    <figure class="movie__img--wrapper">
-        <img class="movie__img" src="${movie.url}">
-    </figure>
-    <div class="movie_title">
-        ${movie.Title}
-    </div>
-    <div class="movie__ratings">
-        ${ratingsHTML(movie.rating)}
-    </div>
-    <div class="movie__price">
-      <span>${movie.originalPrice.toFixed(2)}</span>
-    <div>
+  <figure class="movie__img--wrapper">
+    <img class="movie__img" src="${movie.url}" alt="${movie.Title}">
+  </figure>
+  <div class="movie__title">${movie.Title}</div>
+  <div class="movie__ratings">${ratingsHTML(movie.rating)}</div>
+  <div class="movie__price">${priceHTML(movie.originalPrice, movie.salePrice)}</div>
 </div>`
 }).join('')
 
 function priceHTML(originalPrice, salePrice) {
   console.log(originalPrice, salePrice) 
   if (!salePrice) {
-    return `$$(originalPrice.toFixed(2))`
+    return `$(originalPrice.toFixed(2))`
   }
   else {
-    return `<span class="movie__price--normal">$${originalPrice.toFixed(2)}</span>$${salePrice.toFixed(2)}`
+    return `<span>$${originalPrice.toFixed(2)}</span>`
   }  
 }
-
-priceHTML(originalPrice, salePrice)
 
 moviesWrapper.innerHTML = moviesHtml
 }
@@ -91,7 +83,7 @@ function getMovies() {
       url: "assets/Fast & Furious 6.png",
       Year: "2013",
       originalPrice: 11.55,
-      salePrice: null,
+      salePrice: 9.99,
       rating: 5,      
     },
     {
@@ -118,7 +110,7 @@ function getMovies() {
       url: "assets/2 Fast 2 Furious.png",
       Year: "2003",
       originalPrice: 17.11,
-      salePrice: null,
+      salePrice: 15.87,
       rating: 3.5,
       
     },    
@@ -147,7 +139,7 @@ function getMovies() {
       url: "assets/Fast & Furious 6.png",
       Year: "2013",
       originalPrice: 60.55,
-      salePrice: null,
+      salePrice: 55.55,
       rating: 3.5,      
     },
     {
@@ -174,7 +166,7 @@ function getMovies() {
       url: "assets/2 Fast 2 Furious.png",
       Year: "2003",
       originalPrice: 80.11,
-      salePrice: null,
+      salePrice: 76.34,
       rating: 1.5,      
     },    
     {
