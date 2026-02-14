@@ -5,10 +5,11 @@ let movies;
 
 async function renderMovies(filter) {
 const moviesWrapper = document.querySelector('.movies')
+
 if (!movies) {
 movies = await getMovies();
 }
-moviesWrapper.classList.remove('books__loading')
+moviesWrapper.classList.remove('movies__loading')
 
   if (filter === 'LOW_TO_HIGH') {
    movies.sort((a, b) => a.originalPrice - b.originalPrice)   
@@ -48,7 +49,7 @@ function priceHTML(originalPrice, salePrice) {
   }  
 }
 
-priceHTML()
+priceHTML(originalPrice, salePrice)
 
 moviesWrapper.innerHTML = moviesHtml
 }
