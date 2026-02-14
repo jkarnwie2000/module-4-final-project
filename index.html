@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Julius Gold's Movies</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/f23afc0fcf.js" crossorigin="anonymous"></script>
-    <script src="./movies.js"></script>
+    <script src="./index.js"></script>
 </head>
 <body>
     <section id="landing">
@@ -18,32 +18,35 @@
             <li><a href="#" class="nav__link">Home</a></li>
             <li><a href="#" class="nav__link">Contact</a></li>
             <li><a href="#" class="nav__link nav__link--primary">Movies</a></li>
-        </ul>
-        </div>
+        </ul>        
         <button class="btn__menu">
-            <i class="fas fa-bars"></i>
+            <i class="fas fa-bars" onclick="openMenu()"></i>
         </button>
         <div class="menu__backdrop">
-            <button class="btn__menu btn__menu--close"></button>
-            <ul>
+            <button class="btn__menu btn__menu--close">
+                <i class="fas fa-times" onclick="closeMenu()"></i>
+            </button>
+            <ul class="menu__links">
             <i class="menu__list">
-                <a href="#" class="menu__link">Home</a>
+                <a href="#" class="menu__link" onclick="closeMenu()">Home</a>
             </i>
             <i class="menu__list">
-                <a href="#features" class="menu__link">Movies</a>
+                <a href="#features" class="menu__link" onclick="closeMenu()">Movies</a>
             </i>
             <i class="menu__list">
-                <a class="menu__link no-cursor">Contact</a>
+                <a class="menu__link no-cursor" onclick="closeMenu()">Contact</a>
             </i>
             </ul>
+        </div>
         </div>
         </nav>
         <header>
             <div class="header__container">
                 <div class="header__description">
-                    <h1>Julius Gold's Movies Library</h1>
-                    <h2>Find your favorite movies here</h2>
+                    <h2>Your favorite movies</h2>
+                    <a href="#features">
                     <button class="btn">Browse movies</button>
+                    </a>
                 </div>
                 <figure class="header__img--wrapper">
                     <img src="./assets/moviesheadersvg.png" alt="">
@@ -57,7 +60,7 @@
             <div class="container">
                 <div class="row">
                     <h2 class="section__title">
-                        Why Choose Gold's Library
+                        Why Choose Julius Gold's Library
                     </h2>
                     <div class="highlight__wrapper">
                         <div class="highlight">
@@ -98,7 +101,7 @@
                     <div class="movies">
                         <div class="movie">
                             <figure class="movie__img--wrapper">
-                                <img class="movie__img" src="./assets/movieimg1.png">
+                                <img class="movie__img" src="./assets/The Fast and the Furious.png">
                             </figure>
                             <div class="movie_title">
                                 The Fast and the Furious
@@ -112,9 +115,29 @@
                                 <span class="movie__price--normal">$25.35</span>$16.6
                             </div>
                         </div>
+
                         <div class="movie">
                             <figure class="movie__img--wrapper">
-                                <img class="movie__img" src="./assets/movieimg2.png">
+                                <img class="movie__img" src="/assets/The Fast and the Furious Tokyo Drift.png">
+                            </figure>
+                            <div class="movie_title">
+                                The Fast and the Furious: Tokyo Drift
+                            </div>
+                            <div class="movie__ratings">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fa-solid fa-star-half"></i>
+                            </div>
+                            <div class="movie__price">
+                                <span class="movie__price--normal">$17.20</span>$13.23
+                            </div>
+                        </div>
+
+                        <div class="movie">
+                            <figure class="movie__img--wrapper">
+                                <img class="movie__img" src="./assets/Fast & Furious 6.png">
                             </figure>
                             <div class="movie_title">
                                 Fast & Furious 6
@@ -129,29 +152,49 @@
                             <div class="movie__price">
                                 <span class="movie__price--normal">$11.55</span>$8.55
                             </div>
+                        </div> 
+                                               
+                        <div class="movie">
+                            <figure class="movie__img--wrapper">
+                                <img class="movie__img" src="./assets/Fast Five.png">
+                            </figure>
+                            <div class="movie_title">
+                                Fast Five
+                            </div>
+                            <div class="movie__ratings">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>                                
+                            </div>
+                            <div class="movie__price">
+                                <span class="movie__price--normal">$13.13</span>$10.15
+                            </div>
+                        </div>
+                        
+                        <div class="movie">
+                            <figure class="movie__img--wrapper">
+                                <img class="movie__img" src="./assets/Fast & Furious.png">
+                            </figure>
+                            <div class="movie_title">
+                                Fast & Furious
+                            </div>
+                            <div class="movie__ratings">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>                                
+                            </div>
+                            <div class="movie__price">
+                                <span class="movie__price--normal">$20.11</span>$18.23
+                            </div>
                         </div>                        
+                                              
                         <div class="movie">
                             <figure class="movie__img--wrapper">
-                                <img class="movie__img" src="./assets/movieimg4.png">
+                                <img class="movie__img" src="./assets/2 Fast 2 Furious.png">
                             </figure>
                             <div class="movie_title">
-                                Fast & Furious
-                            </div>
-                            <div class="movie__ratings">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>                                
-                            </div>
-                            <div class="movie__price">
-                                <span class="movie__price--normal">$20.11</span>$18.23
-                            </div>
-                        </div>
-                        
-                        <div class="movie">
-                            <figure class="movie__img--wrapper">
-                                <img class="movie__img" src="./assets/movieimg7.png">
-                            </figure>
-                            <div class="movie_title">
-                                Fast & Furious Presents: Hobbs & Shaw
+                                2 Fast 2 Furious
                             </div>
                             <div class="movie__ratings">
                                 <i class="fas fa-star"></i>
@@ -161,42 +204,7 @@
                                 <i class="fas fa-star"></i>                                
                             </div>
                             <div class="movie__price">
-                                <span class="movie__price--normal">$24.10</span>$19.13
-                            </div>
-                        </div>
-                        
-                        <div class="movie">
-                            <figure class="movie__img--wrapper">
-                                <img class="movie__img" src="./assets/movieimg4.png">
-                            </figure>
-                            <div class="movie_title">
-                                Fast & Furious
-                            </div>
-                            <div class="movie__ratings">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>                                
-                            </div>
-                            <div class="movie__price">
-                                <span class="movie__price--normal">$20.11</span>$18.23
-                            </div>
-                        </div>
-                        
-                        <div class="movie">
-                            <figure class="movie__img--wrapper">
-                                <img class="movie__img" src="./assets/movieimg7.png">
-                            </figure>
-                            <div class="movie_title">
-                                Fast & Furious Presents: Hobbs & Shaw
-                            </div>
-                            <div class="movie__ratings">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>                                
-                            </div>
-                            <div class="movie__price">
-                                <span class="movie__price--normal">$24.10</span>$19.13
+                                <span class="movie__price--normal">$17.11</span>$14.20
                             </div>
                         </div>
                         
@@ -214,25 +222,41 @@
                         Latest Movies
                     </h2>
                     <div class="movies">
+                                
                         <div class="movie">
                             <figure class="movie__img--wrapper">
-                                <img class="movie__img" src="./assets/movieimg1.png">
+                                <img class="movie__img" src="./assets/Fast X.png">
+                            </figure>
+                            <div class="movie_title">
+                                Fast X
+                            </div>
+                            <div class="movie__ratings">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>                                
+                            </div>
+                            <div class="movie__price">
+                                <span class="movie__price--normal">$32.22</span>$26.15
+                            </div>
+                        </div>                        
+                        <div class="movie">
+                            <figure class="movie__img--wrapper">
+                                <img class="movie__img" src="./assets/The Fast and the Furious.png">
                             </figure>
                             <div class="movie_title">
                                 The Fast and the Furious
                             </div>
                             <div class="movie__ratings">
                                 <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>                                
+                                <i class="fas fa-star"></i>
                                 <i class="fa-solid fa-star-half"></i>
                             </div>
                             <div class="movie__price">
-                                <span class="movie__price--normal">$25.35</span>$16.6
+                                <span class="movie__price--normal">$25.35</span>$16.66
                             </div>
                         </div>
                         <div class="movie">
                             <figure class="movie__img--wrapper">
-                                <img class="movie__img" src="./assets/movieimg2.png">
+                                <img class="movie__img" src="./assets/Fast & Furious 6.png">
                             </figure>
                             <div class="movie_title">
                                 Fast & Furious 6
@@ -241,85 +265,51 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>                               
                             </div>
                             <div class="movie__price">
                                 <span class="movie__price--normal">$11.55</span>$8.55
                             </div>
-                        </div>                        
+                        </div>
                         <div class="movie">
                             <figure class="movie__img--wrapper">
-                                <img class="movie__img" src="./assets/movieimg4.png">
+                                <img class="movie__img" src="./assets/Fast Five.png">
+                            </figure>
+                            <div class="movie_title">
+                                Fast Five
+                            </div>
+                            <div class="movie__ratings">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fa-solid fa-star-half"></i>
+                            </div>
+                            <div class="movie__price">
+                                <span class="movie__price--normal">$13.13</span>$10.15
+                            </div>
+                        </div>
+                        <div class="movie">
+                            <figure class="movie__img--wrapper">
+                                <img class="movie__img" src="./assets/Fast & Furious.png">
                             </figure>
                             <div class="movie_title">
                                 Fast & Furious
                             </div>
                             <div class="movie__ratings">
                                 <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>                                
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
                             </div>
                             <div class="movie__price">
                                 <span class="movie__price--normal">$20.11</span>$18.23
                             </div>
                         </div>
-                        
                         <div class="movie">
                             <figure class="movie__img--wrapper">
-                                <img class="movie__img" src="./assets/movieimg7.png">
+                                <img class="movie__img" src="/assets/The Fast and the Furious Tokyo Drift.png">
                             </figure>
                             <div class="movie_title">
-                                Fast & Furious Presents: Hobbs & Shaw
-                            </div>
-                            <div class="movie__ratings">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>                                
-                            </div>
-                            <div class="movie__price">
-                                <span class="movie__price--normal">$24.10</span>$19.13
-                            </div>
-                        </div>
-                        <div class="movie">
-                            <figure class="movie__img--wrapper">
-                                <img class="movie__img" src="./assets/movieimg8.png">
-                            </figure>
-                            <div class="movie_title">
-                                F9: The Fast Saga
-                            </div>
-                            <div class="movie__ratings">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fa-solid fa-star-half"></i>
-                            </div>
-                            <div class="movie__price">
-                                <span class="movie__price--normal">$27.13</span>$23.12
-                            </div>
-                        </div>
-                        <div class="movie">
-                            <figure class="movie__img--wrapper">
-                                <img class="movie__img" src="./assets/movieimg9.png">
-                            </figure>
-                            <div class="movie_title">
-                                Fast X
-                            </div>
-                            <div class="movie__ratings">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <div class="movie__price">
-                                <span class="movie__price--normal">$32.22</span>$26.15
-                            </div>
-                        </div>
-                        <div class="movie">
-                            <figure class="movie__img--wrapper">
-                                <img class="movie__img" src="./assets/movieimg10.png">
-                            </figure>
-                            <div class="movie_title">
-                                Fast Times at Ridgemont High
+                                The Fast and the Furious: Tokyo Drift
                             </div>
                             <div class="movie__ratings">
                                 <i class="fas fa-star"></i>
@@ -329,41 +319,7 @@
                                 <i class="fa-solid fa-star-half"></i>
                             </div>
                             <div class="movie__price">
-                                <span class="movie__price--normal">$40.21</span>$36.18
-                            </div>
-                        </div>
-                        <div class="movie">
-                            <figure class="movie__img--wrapper">
-                                <img class="movie__img" src="./assets/movieimg9.png">
-                            </figure>
-                            <div class="movie_title">
-                                Fast X
-                            </div>
-                            <div class="movie__ratings">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <div class="movie__price">
-                                <span class="movie__price--normal">$32.22</span>$26.15
-                            </div>
-                        </div>
-                        <div class="movie">
-                            <figure class="movie__img--wrapper">
-                                <img class="movie__img" src="./assets/movieimg10.png">
-                            </figure>
-                            <div class="movie_title">
-                                Fast Times at Ridgemont High
-                            </div>
-                            <div class="movie__ratings">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fa-solid fa-star-half"></i>
-                            </div>
-                            <div class="movie__price">
-                                <span class="movie__price--normal">$40.21</span>$36.18
+                                <span class="movie__price--normal">$17.20</span>$13.23
                             </div>
                         </div>
                     </div>
@@ -375,7 +331,7 @@
         <section id="explore">
             <div class="container">
                 <div class="row row__column">
-                    <h2>Find More Movies</h2>
+                    <h2>Find more movies</h2>
                     <a href="#features">
                     <button class="btn">Browse movies</button>
                     </a>
@@ -386,23 +342,23 @@
     
     <footer>
         <div class="container">
-            <div class="row">
+            <div class="row row__column">
                 <a href="#">
                 <figure class="footer__logo">
-                    <img src="./assets/moviesheadersvg.png" class="footer__logo--img" alt="">
+                    <img src="./assets/moviepagelogo.png" class="footer__logo--img" alt="">
                 </figure>
                 </a>
                 <div class="footer__list">
-                    <a href="#" class="footer__link">Home</a>
+                    <a href="" class="footer__link">Home</a>
                     <a class="footer__link no-cursor">About</a>
                     <a href="#" class="footer__link">Movies</a>
                     <a class="footer__link no-cursor">Contact</a>                    
                 </div>
-                <div class="footer__copyright">&copy; Copyright 2026 Julius Gold's Movies Library</div>
+                <div class="footer__copyright">Copyright &copy; 2026 Julius Gold's Library</div>
             </div>
         </div>
     </footer>
     
 </body>
-<script src="posters.js"></script>
+
 </html>
