@@ -181,6 +181,8 @@ function getMovies() {
   ])
     }, 1000)
   })
-
   }
+
+
+
 
