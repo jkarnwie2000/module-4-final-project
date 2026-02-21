@@ -458,6 +458,11 @@ img {
         display: none;
     }
 
+    .section__title, 
+    .movies__header,
+    input#searchbar,
+    .select#filter, 
+
     .menu__btn {
         display: block;
 

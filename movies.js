@@ -1,6 +1,27 @@
 
 // EXTERNAL OMDB API DATA
 
+function priceHTML(originalPrice, salePrice) {
+  console.log(originalPrice, salePrice) 
+  if (!salePrice) {
+    return `$(originalPrice.toFixed(2))`
+  }
+  else {
+    return `<span>$${originalPrice.toFixed(2)}</span>`
+  }  
+}
+
+async function init () {
+  await renderMovies();
+  const search = document.getElementById("searchbar");
+  search.addEventListener("input", (e) => {
+    const value = e.target.value.toLowerCase();
+    const filtered = movies.filter(m => m.Title.toLowerCase().includes(value));
+    renderFilteredMovies(filtered);
+  })
+}
+init()
+
 let movies; 
 
 async function renderMovies(filter) {
@@ -33,16 +54,6 @@ const moviesHtml = movies.map((movie) => {
 </div>`
 }).join('')
 
-function priceHTML(originalPrice, salePrice) {
-  console.log(originalPrice, salePrice) 
-  if (!salePrice) {
-    return `$(originalPrice.toFixed(2))`
-  }
-  else {
-    return `<span>$${originalPrice.toFixed(2)}</span>`
-  }  
-}
-
 moviesWrapper.innerHTML = moviesHtml
 }
 function ratingsHTML(rating) {
@@ -70,7 +81,7 @@ function getMovies() {
       resolve ([
       {
       id: 1,
-      Title: "The Fast and the Furious",
+      Title: "Zz: The Fast and the Furious",
       url: "assets/The Fast and the Furious.png",
       Year: "2001",
       originalPrice: 25.35,
@@ -79,7 +90,7 @@ function getMovies() {
     },
     {
       id: 2,
-      Title: "Fast & Furious 6",
+      Title: "Bb: Fast & Furious 6",
       url: "assets/Fast & Furious 6.png",
       Year: "2013",
       originalPrice: 11.55,
@@ -88,7 +99,7 @@ function getMovies() {
     },
     {
       id: 3,
-      Title: "Fast Five",
+      Title: "Qq: Fast Five",
       url: "assets/Fast Five.png",
       Year: "2011",
       originalPrice: 13.13,
@@ -97,7 +108,7 @@ function getMovies() {
     },
     {
       id: 4,
-      Title: "Fast & Furious",
+      Title: "Mm: Fast & Furious",
       url: "assets/Fast & Furious.png",
       Year: "2009",
       originalPrice: 20.11,
@@ -106,7 +117,7 @@ function getMovies() {
     },    
     {
       id: 5,
-      Title: "2 Fast 2 Furious",
+      Title: "Ll: 2 Fast 2 Furious",
       url: "assets/2 Fast 2 Furious.png",
       Year: "2003",
       originalPrice: 17.11,
@@ -116,7 +127,7 @@ function getMovies() {
     },    
     {
       id: 6,
-      Title: "Fast X",
+      Title: "Gg: Fast X",
       url: "assets/Fast X.png",
       Year: "2023",
       originalPrice: 32.22,
@@ -125,7 +136,7 @@ function getMovies() {
     },    
     {
       id: 1,
-      Title: "The Fast and the Furious",
+      Title: "Ss: The Fast and the Furious",
       url: "assets/The Fast and the Furious.png",
       Year: "2001",
       originalPrice: 42.35,
@@ -135,7 +146,7 @@ function getMovies() {
     },
     {
       id: 2,
-      Title: "Fast & Furious 6",
+      Title: "Kk: Fast & Furious 6",
       url: "assets/Fast & Furious 6.png",
       Year: "2013",
       originalPrice: 60.55,
@@ -144,7 +155,7 @@ function getMovies() {
     },
     {
       id: 3,
-      Title: "Fast Five",
+      Title: "Tt: Fast Five",
       url: "assets/Fast Five.png",
       Year: "2011",
       originalPrice: 41.13,
@@ -153,7 +164,7 @@ function getMovies() {
     },
     {
       id: 4,
-      Title: "Fast & Furious",
+      Title: "Pp: Fast & Furious",
       url: "assets/Fast & Furious.png",      
       Year: "2009",
       originalPrice: 70.11,
@@ -162,7 +173,7 @@ function getMovies() {
     },    
     {
       id: 6,
-      Title: "2 Fast 2 Furious",
+      Title: "Ww: 2 Fast 2 Furious",
       url: "assets/2 Fast 2 Furious.png",
       Year: "2003",
       originalPrice: 80.11,
@@ -171,7 +182,7 @@ function getMovies() {
     },    
     {
       id: 9,
-      Title: "Fast X",
+      Title: "Yy: Fast X",
       url: "assets/Fast X.png",
       Year: "2023",
       originalPrice: 98.22,
