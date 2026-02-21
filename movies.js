@@ -184,5 +184,30 @@ function getMovies() {
   }
 
 
+/**SEARCH BAR FUNCTIONALITY CODES**SEARCH BAR FUNCTIONALITY CODES**SEARCH BAR FUNCTIONALITY CODES**/
 
+document.getElementById("searchbar").addEventListener("input", (e) => {
+  const value = e.target.value.toLowerCase();
+
+  const filtered = movies.filter(movie => movie.Title.toLowerCase().includes(value)
+);
+
+renderFilteredMovies(filtered)
+})
+
+
+function renderFilteredMovies(list) {
+  const moviesWrapper = document.querySelector(".movies");
+
+  moviesWrapper.innerHTML = list.map(movie => `
+    <div class="movie">
+    <figure class="movie__img--wrapper">
+        <img class="movie__img" src="${movie.url}" alt="${movie.Title}">
+    </figure>
+    <div class="movie__title">${movie.Title}</div>
+    <div class="movie__ratings">${ratingsHTML(movie.rating)}</div>
+    <div class="movie__price">${priceHTML(movie.originalPrice, movie.salePrice)}</span>$16.6
+    </div>
+</div>`).join("");
+}
 
